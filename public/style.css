@@ -1,0 +1,227 @@
+@import url(reset.css);
+/* ================= */
+
+body{
+    background-color: #f5f5f5;
+    font-family: Roboto;
+}
+.screen{
+    display: none;
+}
+
+.screen.active{
+    display: block;
+}
+
+.app{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+}
+
+.join-screen .form{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+}
+
+.join-screen .form .form-input{
+    margin: 10px 0px;
+}
+
+.join-screen .form h2 {
+    font-size: 40px;
+    line-height: 45px;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.join-screen .form button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #b8b7b7;
+    color: ghostwhite;
+}
+
+.join-screen .form button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+.join-screen .form button:hover span{
+    color: black !important;
+}
+
+.join-screen .form button::after,
+.join-screen .form button::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.join-screen .form button::before{
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.join-screen .form button:hover::before{
+    transform: translate3d(100%, 0, 0);
+}
+
+.join-screen .form #join-id b {
+    color: #222;
+    display: block;
+    margin-top: 20px;
+}
+
+.join-screen .form #join-id span {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 25px;
+    font-family: monospace;
+    color: #222;
+    padding: 10px;
+    border: 2px dashed #111;
+}
+
+.join-screen .form label {
+    color: #222;
+    font-size: 18px;
+}
+
+.join-screen .form input {
+    display: block;
+    margin: 10px 0px;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #111;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.fs-screen{
+    padding: 20px;
+}
+
+.fs-screen .file-input {
+    width: 100%;
+    border: 2px dashed #555;
+}
+
+.fs-screen .file-input label {
+    display: block;
+    width: 100%;
+    padding: 40px 50px;
+    text-align: center;
+    color: #111;
+    font-size: 18px;
+}
+
+.fs-screen .file-input input {
+    display: none;
+}
+
+.fs-screen .files-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.fs-screen .files-list .title {
+    width: 100%;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.fs-screen .files-list .item {
+    width: 33.33%;
+    min-width: 200px;
+}
+
+.fs-screen .files-list .item .progress{
+    padding: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-family: monospace;
+    color: #222;
+}
+
+.fs-screen .files-list .item .filename{
+    font-size: 16px;
+    padding: 5px;
+    border-top: 1px solid #eee;
+}
+
+.card {
+    margin: 0 auto;
+    background-color: #F8FBFE;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
